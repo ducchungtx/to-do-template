@@ -1,25 +1,24 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
 
 class App extends Component {
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
+      <div id="main">
+        <h1>Lịch làm việc</h1>
+        <ul className="list-group">
+          <li className="list-group-item ">
+            <div className="undone">
+              <span className="glyphicon glyphicon-ok icon" aria-hidden="true"></span>
+              123
+              <button type="button" className="close">&times;</button>
+            </div>
+           </li> 
+        </ul>
+        <form ref="form" className="form-inline">
+            <input type="text" ref="itemName" className="form-control" placeholder="thêm công việc..."/>
+            <button type="submit" className="btn btn-default">Thêm</button> 
+        </form>
       </div>
     );
   }
